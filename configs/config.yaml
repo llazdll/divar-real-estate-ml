@@ -1,0 +1,21 @@
+project:
+  name: divar-real-estate-price-prediction
+  random_state: 42
+  target_task: residential_sale_price_regression
+
+data:
+  # Update after inspecting the Kaggle input directory.
+  input_dir: /kaggle/input
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  output_dir: /kaggle/working/divar_outputs
+
+modeling:
+  test_size: 0.20
+  validation_size: 0.20
+  target_column: null  # Set only after Phase 01 schema inspection.
+  metric_names:
+    - MAE
+    - RMSE
+    - R2
